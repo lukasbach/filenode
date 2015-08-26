@@ -1,0 +1,249 @@
+@import "normalize.less";
+@import "preboot.less";
+
+// Variables
+
+
+// Base Less
+* {
+    outline: none;
+}
+     
+.preventSelection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+::selection {
+  background: lighten(black, 30%);
+  color: white;
+}
+::-moz-selection {
+  background: lighten(black, 30%);
+  color: white;
+}
+
+html, body {
+	height: 100%;
+}
+
+.topnav {
+	z-index: 1500;
+	line-height: 64px !important;
+	height: 64px !important;
+
+	li {
+		@media only screen and (max-width: 600px) {
+			margin-top: 18px;
+		}
+	}
+}
+
+.nav-wrapper {
+	line-height: 64px !important;
+}
+
+.headtitle {
+	font-family: arial;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.topnav-icos li a i {
+	font-size: 26px;
+}
+
+.nav-sort {
+	width: 200px !important;
+}
+
+.filetable {
+	.preventSelection();
+}
+
+@media screen and (min-width: 1000px) {
+	.filetable li:not(.keepBox) .secondary-content {
+		display: none;
+	}
+}
+.filetable li:hover .secondary-content {
+	display: block;
+}
+
+
+.filetable-element:nth-child(even),.fileinfomodal li:nth-child(even) {
+	background-color: darken(white, 5%);
+
+	&:hover {
+		background-color: darken(white, 10%);
+	}
+}
+.filetable-element:nth-child(odd), .fileinfomodal li:nth-child(odd) {
+	background-color: darken(white, 2%);
+
+	&:hover {
+		background-color: darken(white, 7%);
+	}
+}
+.fileinfomodal li {
+	.transition(background-color .2s ease);
+}
+.filetable-element {
+	.transition(background-color .2s ease);
+	cursor: pointer;
+}
+
+.filetable-element-filename {
+	font-weight: bold;
+}
+
+
+.fileinfomodal {
+	.title {
+		font-weight: bold;
+	}
+}
+
+.openas-btn {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+
+
+// breadcrumbs
+
+.breadcrumbs {
+	.preventSelection();
+}
+
+.breadcrumbs-folder, .breadcrumbs-slash {
+	display: inline-block;
+	letter-spacing: 1px;
+	padding: 0 3px;
+}
+
+.breadcrumbs-folder {
+	cursor: pointer;
+	.transition(background-color .2s ease);
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.05);
+	}
+}
+
+// Pages
+
+.page.about {
+	.title {
+		font-family: arial;
+		font-size: 46px;
+		font-weight: bolder;
+		text-align: center;
+	}
+	.info {
+		font-size: 18px;
+		font-family: georgia, serif;
+		font-style: italic;
+		p {
+			text-align: center;
+		}
+	}
+}
+
+.videoviewer-videocontainer {
+	width: 100%;
+}
+
+// Alternative layouts
+
+.layout-list {
+	.filetable-element {
+		background-image: none !important;
+		padding: 5px 10px !important;
+		min-height: 0px !important;
+	
+		.filetable-element-infotext {
+			display: none;
+		}
+
+		.filetable-element-ico:not(.ico-alt) {
+			display: none;
+		}
+		.filetable-element-filename {
+			padding-left: 15px !important;
+			font-size: 14px !important;
+			font-weight: normal !important;
+		}
+		.ico-alt {
+			display: block;
+			float: left;
+		}
+		.secondary-content {
+			top: 5px !important;
+			right: 5px !important;
+		}
+	}
+}
+
+.layout-large {
+	.filetable-element:not(.filetable-element-folderup) {
+		background-size: cover;
+
+		.ico-alt {
+			display: none;
+		}
+
+		.filetable-element-filename, .filetable-element-infotext {
+			padding: 6px;
+			border-radius: 5px;
+		}
+		.filetable-element-filename {
+			background-color: rgba(255, 255, 255, .4);
+		}
+		.filetable-element-infotext {
+			margin-top: 6px !important;
+			background-color: rgba(255, 255, 255, .2);
+			//display: inline-block;
+		}
+
+		min-height: 220px !important;
+		display: inline-block;
+		width: 50%;
+	}
+
+	.filetable-element.filetable-element-folderup {
+		.ico-alt {
+			display: none;
+		}
+	}
+
+
+	.filetable-element {
+		background-color: darken(white, 5%);
+
+		&:hover {
+			background-color: darken(white, 10%);
+		}
+	}
+	.filetable-element:nth-child(4n+1), .filetable-element:nth-child(4n+2) {
+		background-color: darken(white, 2%);
+
+		&:hover {
+			background-color: darken(white, 7%);
+		}
+	}
+}
+
+.layout-default {
+	.filetable-element {
+		.ico-alt {
+			display: none;
+		}
+		background-image: none !important;
+	}
+}
