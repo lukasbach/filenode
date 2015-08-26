@@ -38,8 +38,8 @@ if(!isset($_SESSION["loggedIn"])) {
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
             
-        <!-- Additional js files -->
-        <script src="js/openDir.js"></script>
+        <!-- Main script -->
+        <script src="js/script.js"></script>
 
         <!-- logged in? -->
         <script>
