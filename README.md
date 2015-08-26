@@ -4,7 +4,7 @@ Filenode is an file explorer based in php and javascript, that uses the server i
 You can use filenode to allow visitors, clients, team members or other people to browse specified directories and files. There is an option to black- or whitelist directories if you want to restrict the files and folders, that can be accessed.
 
 ## Easy installation
-Having a size of around 80kb, filenode has an extremely small size. It also does not require any database, which makes it very fast to set up and allows multiple filenode installations on the same server.
+Having a size of around 25kb, filenode has an extremely small size. It also does not require any database, which makes it very fast to set up and allows multiple filenode installations on the same server.
 
 ## Secure
 There's a whitelist feature built in. It's easy to define which directories can be accessed and which cannot.
